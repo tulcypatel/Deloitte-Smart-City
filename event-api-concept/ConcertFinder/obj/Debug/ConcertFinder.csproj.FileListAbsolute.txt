@@ -1,0 +1,49 @@
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\ConcertFinder.dll.config
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\ConcertFinder.dll
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\ConcertFinder.pdb
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\Newtonsoft.Json.dll
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\System.Net.Http.dll
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\System.Security.Cryptography.Algorithms.dll
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\System.Security.Cryptography.Encoding.dll
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\System.Security.Cryptography.Primitives.dll
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\Newtonsoft.Json.pdb
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\bin\Newtonsoft.Json.xml
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\obj\Debug\ConcertFinder.csproj.CoreCompileInputs.cache
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\obj\Debug\ConcertFinder.csproj.CopyComplete
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\obj\Debug\ConcertFinder.dll
+C:\Users\lizet_000\Documents\Computer_Science\Spring 2019\CSE445\Homework3\ConcertFinder\ConcertFinder\obj\Debug\ConcertFinder.pdb
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\ConcertFinder.dll.config
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\ConcertFinder.dll
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\ConcertFinder.pdb
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\Newtonsoft.Json.dll
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\System.Net.Http.dll
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\System.Security.Cryptography.Algorithms.dll
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\System.Security.Cryptography.Encoding.dll
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\System.Security.Cryptography.Primitives.dll
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\System.Security.Cryptography.X509Certificates.dll
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\Newtonsoft.Json.pdb
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\bin\Newtonsoft.Json.xml
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.csprojAssemblyReference.cache
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.csproj.CoreCompileInputs.cache
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.csproj.CopyComplete
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.dll
+\\Mac\Home\Downloads\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.pdb
+\\Mac\My Passport Photos\Downloads as of 010120\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.dll
+\\Mac\My Passport Photos\Downloads as of 010120\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.pdb
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\ConcertFinder.dll.config
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\ConcertFinder.dll
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\ConcertFinder.pdb
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\Newtonsoft.Json.dll
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\System.Net.Http.dll
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\System.Security.Cryptography.Algorithms.dll
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\System.Security.Cryptography.Encoding.dll
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\System.Security.Cryptography.Primitives.dll
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\System.Security.Cryptography.X509Certificates.dll
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\Newtonsoft.Json.pdb
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\bin\Newtonsoft.Json.xml
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.csproj.CopyComplete
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.dll
+\\Mac\Home\Desktop\Spring 2020\CSE 486\ConcertFinder-2\ConcertFinder\obj\Debug\ConcertFinder.pdb

@@ -9,7 +9,7 @@ Andrew Marshall, Lily Minsky, Romonte Moore, Ian Mwangi, Tulcy Patel, Darren Vas
 
 React Mobile Web App [`./webapp`](./webapp)
 
-C# API Test Program [`./api-test`](./api-test) - initial API manipulation test, created with Visual Studio
+C# API Concept Program [`./event-api-concept`](./event-api-concept) - initial Event API manipulation concept, created with Visual Studio
 
 Axure RP Prototype [`./mockups`](./mockups) - initial concept mockup
 
