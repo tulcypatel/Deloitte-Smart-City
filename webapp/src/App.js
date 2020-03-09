@@ -18,11 +18,12 @@ import EventIcon from '@material-ui/icons/Event';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Test from './Components/Test.js';
+import Events from './Components/Events/EventsRouter';
 
 
-function App(props) {
+function App() {
 
-    const useStyles = makeStyles(theme => ({
+    const useStyles = makeStyles(() => ({
       navbar: {
         flexGrow: 1,
         background: '#000000',
@@ -46,28 +47,29 @@ function App(props) {
     const classes = useStyles();
     const [value, setValue] = React.useState('Home');
   
-    const handleChange = (event, newValue) => {
+    const handleChange = (_, newValue) => {
       setValue(newValue);
     };
 
     useEffect(() => {
-      switch(window.location.pathname) {
-        case "/":
+      //console.log(window.location.pathname.split('/')[1])
+      switch(window.location.pathname.split('/')[1]) {
+        case "":
           setValue("Home");
           break;
-        case "/events":
+        case "events":
           setValue("Events");
           break;
-        case "/deals":
+        case "deals":
           setValue("Deals");
           break;
-        case "/parking":
+        case "parking":
           setValue("Parking");
           break;
-        case "/alerts":
+        case "alerts":
           setValue("Alerts");
           break;
-        case "/profile":
+        case "profile":
           setValue("Profile");
           break;
         default:
@@ -76,7 +78,7 @@ function App(props) {
     }, []);
 
     return (
-      <div>
+      <div className="wrapper">
       	<Router>
           <div className='main-navbar'>
             <BottomNavigation value={value} onChange={handleChange} className={classes.navbar}>
@@ -98,11 +100,11 @@ function App(props) {
           <div className="mobile-simulation">
             <Switch>
               <Route key='home' path='/' exact component={() => <Test test="HOME"/>}/>
-              <Route key='events' path='/events' exact component={() => <Test test="EVENTS"/>}/>
-              <Route key='deals' path='/deals' exact component={() => <Test test="DEALS"/>}/>
-              <Route key='parking' path='/parking' exact component={() => <Test test="PARKING"/>}/>
-              <Route key='alerts' path='/alerts' exact component={() => <Test test="ALERTS"/>}/>
-              <Route key='profile' path='/profile' exact component={() => <Test test="PROFILE"/>}/>
+              <Route key='events' path='/events' component={() => <Events/>}/>
+              <Route key='deals' path='/deals' component={() => <Test test="DEALS"/>}/>
+              <Route key='parking' path='/parking' component={() => <Test test="PARKING"/>}/>
+              <Route key='alerts' path='/alerts' component={() => <Test test="ALERTS"/>}/>
+              <Route key='profile' path='/profile' component={() => <Test test="PROFILE"/>}/>
               <Route component={() => <Test test="404 PAGE"/>}/>
             </Switch>
             <br/>
