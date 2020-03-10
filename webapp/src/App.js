@@ -19,6 +19,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Test from './Components/Test.js';
 import Events from './Components/Events/EventsRouter';
+import Parking from './Components/Parking/ParkingRouter';
 
 
 function App() {
