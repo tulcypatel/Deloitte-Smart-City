@@ -102,7 +102,7 @@ function App() {
               <Route key='home' path='/' exact component={() => <Test test="HOME"/>}/>
               <Route key='events' path='/events' component={() => <Events/>}/>
               <Route key='deals' path='/deals' component={() => <Test test="DEALS"/>}/>
-              <Route key='parking' path='/parking' component={() => <Test test="PARKING"/>}/>
+              <Route key='parking' path='/parking' component={() => <Parking/>}/> /*Test test="PARKING"*/
               <Route key='alerts' path='/alerts' component={() => <Test test="ALERTS"/>}/>
               <Route key='profile' path='/profile' component={() => <Test test="PROFILE"/>}/>
               <Route component={() => <Test test="404 PAGE"/>}/>
