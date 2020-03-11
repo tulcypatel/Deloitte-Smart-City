@@ -20,6 +20,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Test from './Components/Test.js';
 import Events from './Components/Events/EventsRouter';
 import Parking from './Components/Parking/ParkingRouter';
+import Home from './Components/Home/HomeRouter';
 
 
 function App() {
@@ -100,7 +101,7 @@ function App() {
           </AppBar>
           <div className="mobile-simulation">
             <Switch>
-              <Route key='home' path='/' exact component={() => <Test test="HOME"/>}/>
+              <Route key='home' path='/' exact component={() => <Home/>}/> /*Test test="PARKING"*/
               <Route key='events' path='/events' component={() => <Events/>}/>
               <Route key='deals' path='/deals' component={() => <Test test="DEALS"/>}/>
               <Route key='parking' path='/parking' component={() => <Parking/>}/> /*Test test="PARKING"*/
