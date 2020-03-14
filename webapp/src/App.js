@@ -18,6 +18,8 @@ import EventIcon from '@material-ui/icons/Event';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Test from './Components/Test.js';
+import Login from './Components/Auth/Login.js';
+import Register from './Components/Auth/Register.js';
 import Events from './Components/Events/EventsRouter';
 import Parking from './Components/Parking/ParkingRouter';
 import Home from './Components/Home/HomeRouter';
@@ -96,11 +98,15 @@ function App() {
               <Typography variant="h6" className={classes.title}>
                 SmartCity » {value}
               </Typography>
-              <Button color="inherit">Login</Button>
+              <Button component={Link} to="/login" color="inherit">
+                Login
+              </Button>
             </Toolbar>
           </AppBar>
           <div className="mobile-simulation">
             <Switch>
+              <Route exact path="/login" component={Login}/>
+              <Route exact path="/register" component={Register}/>
               <Route key='home' path='/' exact component={() => <Home/>}/> /*Test test="PARKING"*/
               <Route key='events' path='/events' component={() => <Events/>}/>
               <Route key='deals' path='/deals' component={() => <Test test="DEALS"/>}/>
