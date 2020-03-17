@@ -20,6 +20,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Test from './Components/Test.js';
 import Login from './Components/Auth/Login.js';
 import Register from './Components/Auth/Register.js';
+import Alerts from './Components/Alerts/Alerts.js';
 import Events from './Components/Events/EventsRouter';
 import Parking from './Components/Parking/ParkingRouter';
 import Home from './Components/Home/HomeRouter';
@@ -55,8 +56,14 @@ function App() {
       setValue(newValue);
     };
 
+    /*
     useEffect(() => {
       //console.log(window.location.pathname.split('/')[1])
+      if(window.location.pathname === "/") {
+        setValue("Home")
+      } else
+      setValue(window.location.pathname.substr(1).split('/').join(' » '));
+      
       switch(window.location.pathname.split('/')[1]) {
         case "":
           setValue("Home");
@@ -79,7 +86,9 @@ function App() {
         default:
           setValue("Page Not Found");
       }
+      
     }, []);
+    */
 
     return (
       <div className="wrapper">
@@ -96,7 +105,7 @@ function App() {
           <AppBar position="static">
             <Toolbar className={classes.toolbar}>
               <Typography variant="h6" className={classes.title}>
-                SmartCity » {value}
+                SmartCity - Phoenix Metro Area
               </Typography>
               <Button component={Link} to="/login" color="inherit">
                 Login
@@ -111,7 +120,7 @@ function App() {
               <Route key='events' path='/events' component={() => <Events/>}/>
               <Route key='deals' path='/deals' component={() => <Test test="DEALS"/>}/>
               <Route key='parking' path='/parking' component={() => <Parking/>}/> /*Test test="PARKING"*/
-              <Route key='alerts' path='/alerts' component={() => <Test test="ALERTS"/>}/>
+              <Route key='alerts' path='/alerts' component={() => <Alerts/>}/>
               <Route key='profile' path='/profile' component={() => <Test test="PROFILE"/>}/>
               <Route component={() => <Test test="404 PAGE"/>}/>
             </Switch>
