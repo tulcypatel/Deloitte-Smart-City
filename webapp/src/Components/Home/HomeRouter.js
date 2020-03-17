@@ -14,8 +14,7 @@ function HomeRouter() {
 
     const useStyles = makeStyles(theme => ({
         bg: {
-            background: 'linear-gradient(45deg, #1a84b8 30%, #094851 80%)',
-            // this is an example of how we can make the background look very fancy.
+            background: 'linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)',
         },
         root: {
 
@@ -58,7 +57,7 @@ function HomeRouter() {
                     <br/>
                   <GridList cellHeight={180} className={classes.gridList}>
                     <GridListTile key="Subheader" cols={2} style={{ height: 'auto', textAlign: 'center' }}>
-                      <ListSubheader component="div">Welcome to City Circle!</ListSubheader>
+                      <ListSubheader component="div" style={{color:'white'}}>Welcome to City Circle!</ListSubheader>
                     </GridListTile>
                       {homePages.map(tile => (
                           <GridListTile key={tile.image} cols={2} style={{cursor: 'pointer', padding: "2%"}} onClick={() => console.log("clicked!" + tile.type)} component={Link} to={'/' + tile.url}>

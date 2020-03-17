@@ -41,7 +41,12 @@ export default function Alerts(props) {
     return (
         <div>
             <div className={classes.root}>
-                <Grid container spacing={3}>
+                <Grid
+  container
+  direction="column-reverse"
+  justify="flex-end"
+  alignItems="stretch"
+>
                     {alerts && alerts.map(alert => (
                         <Grid item xs={12} key={alert.AlertID.N}>
                             <Card className={classes.root}>
