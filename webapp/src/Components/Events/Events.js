@@ -1,5 +1,4 @@
 import React from 'react';
-
 import axios from 'axios';
 
 export default function Events(props) {
@@ -20,9 +19,10 @@ export default function Events(props) {
 
     return (
         <div>
-            test - 
             {events && events.map(event => (
-                event.name
+                <div>
+                    
+                </div>
             ))}
         </div>
     );

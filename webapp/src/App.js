@@ -56,7 +56,7 @@ function App() {
       setValue(newValue);
     };
 
-    /*
+    
     useEffect(() => {
       //console.log(window.location.pathname.split('/')[1])
       if(window.location.pathname === "/") {
@@ -88,7 +88,7 @@ function App() {
       }
       
     }, []);
-    */
+    
 
     return (
       <div className="wrapper">
@@ -116,10 +116,10 @@ function App() {
             <Switch>
               <Route exact path="/login" component={Login}/>
               <Route exact path="/register" component={Register}/>
-              <Route key='home' path='/' exact component={() => <Home/>}/> /*Test test="PARKING"*/
+              <Route key='home' path='/' exact component={() => <Home/>}/> 
               <Route key='events' path='/events' component={() => <Events/>}/>
               <Route key='deals' path='/deals' component={() => <Test test="DEALS"/>}/>
-              <Route key='parking' path='/parking' component={() => <Parking/>}/> /*Test test="PARKING"*/
+              <Route key='parking' path='/parking' component={() => <Parking/>}/>
               <Route key='alerts' path='/alerts' component={() => <Alerts/>}/>
               <Route key='profile' path='/profile' component={() => <Test test="PROFILE"/>}/>
               <Route component={() => <Test test="404 PAGE"/>}/>
