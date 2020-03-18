@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
-import {Paper, Grid, Typography, Button, Card, CardContent, CardActions} from '@material-ui/core'
+import { Grid, Typography, Card, CardContent} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 
 import axios from 'axios';
@@ -8,7 +8,7 @@ import axios from 'axios';
 export default function Alerts(props) {
 
     const [alerts, setAlerts] = React.useState([]);
-    const [loaded, setLoaded] = React.useState(false);
+    //const [loaded, setLoaded] = React.useState(false);
 
     const useStyles = makeStyles(theme => ({
         root: {
@@ -41,12 +41,7 @@ export default function Alerts(props) {
     return (
         <div>
             <div className={classes.root}>
-                <Grid
-  container
-  direction="column-reverse"
-  justify="flex-end"
-  alignItems="stretch"
->
+                <Grid container direction="column-reverse" justify="flex-end" alignItems="stretch" spacing={2}>
                     {alerts && alerts.map(alert => (
                         <Grid item xs={12} key={alert.AlertID.N}>
                             <Card className={classes.root}>
@@ -69,7 +64,6 @@ export default function Alerts(props) {
                     ))}
                 </Grid>
             </div>
-
         </div>
     );
 

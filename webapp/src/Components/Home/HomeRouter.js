@@ -36,7 +36,7 @@ function HomeRouter() {
             image: "https://m.media-amazon.com/images/G/01/DeveloperBlogs/AlexaBlogs/default/blog_leaderboard-sdk_954x240.png._CB442786809_.png",
             subtitle: "Check out where you rank",
             description: "this is a temporary description",
-            url: "Deals"
+            url: "deals"
         },
         {
             type: "Events",

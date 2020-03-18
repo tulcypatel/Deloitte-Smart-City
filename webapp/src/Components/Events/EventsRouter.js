@@ -120,7 +120,7 @@ function EventsRouter() {
                 </div>
               }/>
               <Route key='art' path='/events/art' component={() => <Events keyword="art"/>}/>
-              <Route key='all' path='/events/all' component={() => <Events keyword="any"/>}/>
+              <Route key='all' path='/events/all' component={() => <Events keyword=""/>}/>
               <Route key='festivals' path='/events/festivals' component={() => <Events keyword="festivals"/>}/>
               <Route key='jazz' path='/events/jazz' component={() => <Events keyword="jazz"/>}/>
               <Route key='music' path='/events/music' component={() => <Events keyword="music"/>}/>
