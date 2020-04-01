@@ -60,7 +60,7 @@ function ParkingRouter()
 }
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyAYaadUrcIYhGAEFKhJxL25hS8yP8gWOcA'
+    apiKey: process.env.REACT_APP_GOOGLE_API_KEY
   })(Parking);
 
 // export default ParkingRouter;

@@ -1,3 +1,4 @@
 
 webapp/src/config.json
 .DS_Store
+.env
