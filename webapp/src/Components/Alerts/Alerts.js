@@ -15,8 +15,17 @@ export default function Alerts(props) {
     const [filteredAlerts, setFilteredAlerts] = React.useState([]);
 
     const useStyles = makeStyles(theme => ({
+        bg: {
+        
+          //  background-color: '#2a2a72',
+            background: 'linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)',
+            // this is an example of how we can make the background look very fancy.
+        },
         root: {
           flexGrow: 1,
+          borderRadius: 3,
+          border: 0, 
+          padding: '0 20px',
         },
         paper: {
           padding: theme.spacing(2),
@@ -79,6 +88,7 @@ export default function Alerts(props) {
     } else
     return (
         <div>
+            <div className={classes.bg}>
             <div className={classes.root}>
                 <div className={classes.header}>
                     <Button aria-controls="simple menu" aria-haspopup="true" onClick={handleClick} endIcon={<FilterListIcon/>}>
@@ -112,6 +122,7 @@ export default function Alerts(props) {
                         </Grid>
                     ))}
                 </Grid>
+            </div>
             </div>
         </div>
     );

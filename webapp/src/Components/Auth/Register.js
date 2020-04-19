@@ -67,9 +67,10 @@ class Register extends Component {
 
   render() {
     return (
+      <div className="bg" style ={{background: 'linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)' ,alignContent:'center',textAlign:'center',paddingTop:'10px' ,color:'white',paddingRight:'10px'}}>
       <section className="section auth">
         <div className="container">
-          <h1>Register</h1>
+          <h1 style={{fontSize:'40px'}}>Register</h1>
           <FormErrors formerrors={this.state.errors} />
 
           <form onSubmit={this.handleSubmit}>
@@ -83,7 +84,7 @@ class Register extends Component {
                   placeholder="Enter username"
                   value={this.state.username}
                   onChange={this.onInputChange}
-                />
+               style={{borderRadius: '4px',margin: '2px 0',padding: '6px 12px'}} />
               </p>
             </div>
             <div className="field">
@@ -96,7 +97,7 @@ class Register extends Component {
                   placeholder="Enter email"
                   value={this.state.email}
                   onChange={this.onInputChange}
-                />
+                style={{borderRadius: '4px',margin: '2px 0',padding: '6px 12px'}}/>
                 <span className="icon is-small is-left">
                   <i className="fas fa-envelope"></i>
                 </span>
@@ -111,7 +112,7 @@ class Register extends Component {
                   placeholder="Password"
                   value={this.state.password}
                   onChange={this.onInputChange}
-                />
+                style={{borderRadius: '4px',margin: '2px 0',padding: '6px 12px'}}/>
                 <span className="icon is-small is-left">
                   <i className="fas fa-lock"></i>
                 </span>
@@ -126,27 +127,26 @@ class Register extends Component {
                   placeholder="Confirm password"
                   value={this.state.confirmpassword}
                   onChange={this.onInputChange}
-                />
+                style={{borderRadius: '4px',margin: '2px 0',padding: '6px 12px'}}/>
                 <span className="icon is-small is-left">
                   <i className="fas fa-lock"></i>
                 </span>
               </p>
             </div>
+           
             <div className="field">
               <p className="control">
-                <a href="/forgotpassword">Forgot password?</a>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control">
-                <button className="button is-success">
-                  Register
+                <button className="button is-success" style={{backgroundColor:'#4CAF50',color:'white',
+                    borderRadius:'4px',border:'none', cursor:'pointer',padding: '0px 20px',margin:'6px 0'}}>
+                 <h3 style={{fontType:'bold'}}> Register</h3>
                 </button>
               </p>
             </div>
           </form>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
       </section>
+     </div>
     );
   }
 }
