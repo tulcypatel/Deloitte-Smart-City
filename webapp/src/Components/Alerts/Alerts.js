@@ -40,6 +40,9 @@ export default function Alerts(props) {
             textAlign: 'right',
             padding: '1%',
         },
+        card: {
+            paddingTop: '1%',
+        }
       }));
 
     const classes = useStyles();
@@ -57,11 +60,11 @@ export default function Alerts(props) {
 
     React.useEffect(() => {
 
-        if(filter != "All") {
+        if(filter !== "All") {
 
             var tempArray = [];
             for(var index = 0; index < alerts.length; index++) {
-                if(alerts[index].AlertCategory.S == (filter + " Event")) {
+                if(alerts[index].AlertCategory.S === (filter + " Event")) {
                     tempArray.push(alerts[index]);
                 }
             }
@@ -91,19 +94,19 @@ export default function Alerts(props) {
             <div className={classes.bg}>
             <div className={classes.root}>
                 <div className={classes.header}>
-                    <Button aria-controls="simple menu" aria-haspopup="true" onClick={handleClick} endIcon={<FilterListIcon/>}>
+                    <Button aria-controls="simple menu" color="inherit" aria-haspopup="true" onClick={handleClick} endIcon={<FilterListIcon/>}>
                         {filter}
                     </Button>
                     <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
                         <MenuItem onClick={(event) => handleMenuItemClick(event, "All")}>All</MenuItem>
-                        <MenuItem onClick={(event) => handleMenuItemClick(event, "Sports")}>Sports</MenuItem>
+                        <MenuItem onClick={(event) => handleMenuItemClick(event, "Sport")}>Sport</MenuItem>
                         <MenuItem onClick={(event) => handleMenuItemClick(event, "Food")}>Food</MenuItem>
                     </Menu>
                 </div>
-                <Grid container direction="column-reverse" justify="flex-end" alignItems="stretch" spacing={2}>
+                <Grid container direction="column-reverse" justify="flex-end" alignItems="stretch" spacing={2} className={classes.card}>
                     {filteredAlerts && filteredAlerts.map(alert => (
                         <Grid item xs={12} key={alert.AlertID.N}>
-                            <Card className={classes.root}>
+                            <Card>
                                 <CardContent>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
                                         {alert.AlertDate.S + " " + alert.AlertTime.S}
