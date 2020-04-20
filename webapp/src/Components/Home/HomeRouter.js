@@ -50,7 +50,7 @@ function HomeRouter() {
 
  return (
         <Router>
-          <div className={classes.bg}>
+          <div className={classes.bg} style={{paddingTop:'30px'}}>
             <Switch>
               <Route key='home' exact path='/' component={() => 
                 <div className={classes.root}>
@@ -68,12 +68,15 @@ function HomeRouter() {
                           </GridListTile>
                         ))}
                   </GridList>
+                <br /><br /><br /><br/>
                 </div>
+                
               }/>
        
             </Switch>
             <br/>
           </div>
+        
         </Router>
     );
 
