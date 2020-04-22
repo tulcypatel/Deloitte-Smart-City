@@ -6,7 +6,7 @@ import GridList from '@material-ui/core/GridList';
 
 // import CurrentLocation from './Map';
 const mapStyles = 
-{width: '100%', height: '80%'};
+{width: '718px', height: '80%'};
 // const containerStyle = 
 // {position: 'relative', width: '100%', height: '80%'};
   // The style is copy from https://snazzymaps.com/style/2/midnight-commander DARK MODE
@@ -80,13 +80,14 @@ onClose = props => {
   // toggleDarkmode() {
   //   this.setState({isDarkmodeVisible: !this.state.isDarkmodeVisible})
   // }
-  onDarkMode = (props, marker, e) =>
-  this.setState({
-    mapstyles: props,
-    isDarkmodeVisible: true
-    
-  });
-
+onDarkMode = props =>{
+  if(!this.state.isDarkmodeVisible){
+    this.setState({
+      mapstyles: props,
+      isDarkmodeVisible: true,
+    });
+  }
+}
 offDarkMode = props =>{
   if(this.state.isDarkmodeVisible){
     this.setState({
@@ -100,6 +101,7 @@ offDarkMode = props =>{
   // const classes = useStyles();
   render() {
     console.log(this.state.mapstyles);
+    console.log(this.props.styles)
     return (
       <GridList cellHeight={180} className={this.useStyles}>
         <Map
@@ -107,8 +109,9 @@ offDarkMode = props =>{
           zoom={10}
           style={mapStyles}
           onRightclick={this.onDarkMode}
-          styles={this.state.mapstyles}
+          
           onDblclick={this.offDarkMode}
+          styles={this.state.mapstyles}
           initialCenter={{ lat: 33.360355, lng: -111.801682}}
         >
           <Marker
