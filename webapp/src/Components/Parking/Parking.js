@@ -224,6 +224,111 @@ offDarkMode = props =>{
             name={'Cactus Yards has 83 spots available'}
             position={{lat: 33.354817, lng: -111.694103}} 
           />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Barrett The Honors College ASU has 150 spots available'}
+            position={{lat: 33.415319, lng: -111.927445}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Papago Golf Course has 33 spots available'}
+            position={{lat: 33.460798, lng: -111.956868}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Tempe Beach Park has 97 spots available'}
+            position={{lat: 33.430575, lng: -111.941842}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Phoenix Sky Harbor has 3000 spots available'}
+            position={{lat: 33.434588, lng: -112.021217}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Phoenix Art Museum has 0 spots available'}
+            position={{lat: 33.467379, lng: -112.073140}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Steele Indian School Park has 123 spots available'}
+            position={{lat: 33.498591, lng: -112.071161}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Arizona Science Center has 99 spots available'}
+            position={{lat: 33.448797, lng: -112.066928}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'K1 Racing has 81 spots available'}
+            position={{lat: 33.425163, lng: -112.034546}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Raven Golf Club has 43 spots available'}
+            position={{lat: 33.384175, lng: -112.008822}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Cesar Chavez Park has 57 spots available'}
+            position={{lat: 33.369866, lng: -112.138343}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Big Surf has 48 spots available'}
+            position={{lat: 33.445695, lng: -111.914360}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Casino Arizona has 700 spots available'}
+            position={{lat: 33.454289, lng: -111.887318}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Talking Stick Resort has 420 spots available'}
+            position={{lat: 33.539607, lng: -111.872721}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'McDowell Mountain Regional Park has 78 spots available'}
+            position={{lat: 33.679141, lng: -111.763539}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Phoenix Mesa Gateway Airport has 1200 spots available'}
+            position={{lat: 33.311488, lng: -111.662158}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Red Mountain Park has 47 spots available'}
+            position={{lat: 33.433650, lng: -111.663561}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Gila River Hotels and Casinos has 189 spots available'}
+            position={{lat: 33.288178, lng: -111.940868}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Pecos Community Park has 249 spots available'}
+            position={{lat: 33.291981, lng: -111.978585}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Krispy Kreme has 26 spots available'}
+            position={{lat: 33.415267, lng: -111.874214}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Sumida Park has 0 spots available'}
+            position={{lat: 33.543785, lng: -112.042931}} 
+          />
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'Cave Buttes Recreation Area has 657 spots available'}
+            position={{lat: 33.711848, lng: -112.057732}} 
+          />
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
