@@ -1,221 +1,65 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow} from 'google-maps-react';
+import { Grid, Typography, Button, Card, CardContent, CardActions, CardMedia, Container} from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
+import GridList from '@material-ui/core/GridList';
 
 // import CurrentLocation from './Map';
 const mapStyles = 
-{width: '100%', height: '80%', position: 'relative'};
+{width: '100%', height: '80%'};
 // const containerStyle = 
 // {position: 'relative', width: '100%', height: '80%'};
   // The style is copy from https://snazzymaps.com/style/2/midnight-commander DARK MODE
-  const mapstyles= [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
-  // var styledMapType = new google.maps.StyledMapType(mapstyles)
-// var myLatLng = {lat: 33.360355, lng: -111.801682}
-// var myLng = {lat: 33.359423, lng: -111.021071}
+// const mapstyles= [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
 
-
-// export class Parking extends Component {
-//   // constructor(props) {
-//   //   super(props);
-
-//   //   this.generate = {
-//   //     stores: [{latitude: 33.49855629475769, longitude: -111.14184416996333},
-//   //       {latitude: 33.359423, longitude: -111.021071},
-//   //       {latitude: 33.2052192687988, longitude: -111.988426208496},
-//   //       {latitude: 33.6307081, longitude: -111.1434325},
-//   //       {latitude: 33.3084488, longitude: -111.2140121},
-//   //       {latitude: 33.5524695, longitude: -111.0425407}]
-//   //   }
-//   // }
-
-//   park = {
-//     showingInfoWindow: false,
-//     activeMarker: {},
-//     selectedPlace: {},
-//     mapReady: true,
-//     desc: '',
-//     animation: null,
-//     locations: 
-//   [
-//    {
-//     "locationName": "Skyline Steel Parking",
-//     "position": '{"lat": "33.49855629475769", "lng": "-111.14184416996333"}',
-//     "desc": "5 spots available"
-//   },
-//   {
-//     "locationName": "McQueen Park Parking",
-//     "position": '{"lat": "33.359423", "lng": "-111.021071"}',
-//     "desc": "50 spots available"
-//   },
-//   {
-//     "locationName": "Dierks Bentley's Whiskey Row Parking",
-//     "position": '{"lat": "33.2052192687988", "lng": "-111.988426208496"}',
-//     "desc": "15 spots available"
-//   },
-//   {
-//     "locationName": "Oak Tree Parking",
-//     "position": '{"lat": "33.6307081", "lng": "-111.1434325"}',
-//     "desc": "70 spots availble"
-//   },
-//   {
-//     "locationName": "Kokopelli Golf Club Parking",
-//     "position": '{"lat": "33.3084488", "lng": "-111.2140121"}',
-//     "desc": "32 spots available"
-//   }
-//   ]
-//   };
-
-//     state = {
-      // showingInfoWindow: false,  //Hides or the shows the infoWindow
-      // activeMarker: {},          //Shows the active marker upon click
-      // selectedPlace: {}         //Shows the infoWindow to the selected place upon a marker
-//   };
-
-//     // displayMarkers = () => {
-//     //   return this.generate.stores.map((store) => {
-//     //     return <Marker key={store.Store_ID} position={{
-//     //      lat: store.latitude,
-//     //      lng: store.longitude
-//     //    }}
-//     //    onClick={() => console.log("You clicked me!")} />
-//     //   })
-//     // }
-    
-
-//     renderMarkers() {
-//       return this.park.locations.map((location, i) => {
-//         return <Marker
-//           key={ i }
-//           onClick = { this.onMarkerClick }
-//           title = { location.locationName }
-//           position = { JSON.parse(location.position) }
-//           desc = { location.desc }
-//           animation = { this.props.google.maps.Animation.DROP }
-//           name = { location.locationName } />
-//       })
-//     }
-
-    // onMarkerClick = (props, marker, e) =>
-    //     this.setState({
-    //     selectedPlace: props,
-    //     activeMarker: marker,
-    //     showingInfoWindow: true
-    // });
-
-    // onClose = props => {
-    //     if (this.state.showingInfoWindow) {
-    //         this.setState({
-    //             showingInfoWindow: false,
-    //             activeMarker: null
-    //         });
-    //     }
-    // };
-    
-
-//   render() {
-    
-//     return (
-//       <Map
-//         google={this.props.google}
-//         zoom={14}
-//         style={mapStyles}
-//         initialCenter={{
-//             lat: 33.360355,
-//             lng: -111.801682
-//         }}>
-//           <div>{this.renderMarkers()}</div>
-//       {/* <Marker
-//           onClick={this.onMarkerClick}
-//           name={'Gilbert, Arizona'}
-//           position={this.renderMarkers()}
-//         /> */}
-        
-        // <InfoWindow
-        //   marker={this.state.activeMarker}
-        //   visible={this.state.showingInfoWindow}
-        //   onClose={this.onClose}
-        // >
-        //   <div>
-        //     <h4>{this.state.selectedPlace.name}</h4>
-        //   </div>
-        // </InfoWindow>
-//         </Map>
-//     );
-//   }
-// }
 
 export class Parking extends Component {
   constructor(props) {
     super(props);
+  
+    const useStyles = makeStyles(theme => ({
+      bg: {
+          background: 'linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)',
+      },
+      root: {
 
-    // var add = new this.props.google.maps.zoomControl
-    this.states = {
-      // showingInfoWindow: false,  //Hides or the shows the infoWindow
-      // activeMarker: {},          //Shows the active marker upon click
-      // selectedPlace: {},         //Shows the infoWindow to the selected place upon a marker
-      stores: [{lat: 47.49855629475769, lng: -122.14184416996333}, //Does not work for some reason
-              {latitude: 33.4255, longitude: -111.9400},
-              {latitude: 33.4484, longitude: -112.0740},
-              {latitude: 33.3062, longitude: -111.8413},
-              {latitude: 33.3528, longitude: -111.7890},
-              {latitude: 33.352336, longitude: -111.793414}, // Test location
-              {latitude: 33.359913, longitude: -111.767059}, // Test location
-              {latitude: 33.294041, longitude: -111.740705}, // Test location
-              {latitude: 33.352781, longitude: -111.790964}, // Test location
-              {latitude: 33.328375, longitude: -111.741462}, // Test location
-              {latitude: 33.322270, longitude: -111.736390},
-              {latitude: 33.291940, longitude: -111.805010},
-              {latitude: 33.352480, longitude: -111.692690},
-              {latitude: 33.4152, longitude: -111.8315}]
-    }
+      },
+      gridList: {
+          width: "100%",
+          height: "100%",
+      },
+      icon: {
+          color: 'rgba(255, 255, 255, 0.54)',
+      },
+  }));
+
+  // const classes = useStyles();
+    // // var add = new this.props.google.maps.zoomControl
+    // this.states = {
+    //   stores: [{lat: 47.49855629475769, lng: -122.14184416996333}, //Does not work for some reason
+    //           {latitude: 33.4255, longitude: -111.9400},
+    //           {latitude: 33.4484, longitude: -112.0740},
+    //           {latitude: 33.3062, longitude: -111.8413},
+    //           {latitude: 33.3528, longitude: -111.7890},
+    //           {latitude: 33.352336, longitude: -111.793414}, // Test location
+    //           {latitude: 33.359913, longitude: -111.767059}, // Test location
+    //           {latitude: 33.294041, longitude: -111.740705}, // Test location
+    //           {latitude: 33.352781, longitude: -111.790964}, // Test location
+    //           {latitude: 33.328375, longitude: -111.741462}, // Test location
+    //           {latitude: 33.322270, longitude: -111.736390},
+    //           {latitude: 33.291940, longitude: -111.805010},
+    //           {latitude: 33.352480, longitude: -111.692690},
+    //           {latitude: 33.4152, longitude: -111.8315}]
+    // }
   }
 
     state = {
       activeMarker: {},          //Shows the active marker upon click
       selectedPlace: {},         //Shows the infoWindow to the selected place upon a marker
       showingInfoWindow: false,  //Hides or the shows the infoWindow
-      // isHeatmapVisible: false
-      // isDarkmodeVisible: false,
-
+      isDarkmodeVisible: false,
+      mapstyles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
     };
-
-//   onClose = props => {
-//     if (this.states.showingInfoWindow) {
-//         this.setState({
-//             showingInfoWindow: false,
-//             activeMarker: null
-//         });
-//     }
-// };
-
-// onMarkerClick = (props, marker, e) =>
-// this.setState({
-// selectedPlace: props,
-// activeMarker: marker,
-// showingInfoWindow: true
-// });
-
-// onMarkerClick = (props, marker) =>
-//     this.setState({
-//       activeMarker: marker,
-//       selectedPlace: props,
-//       showingInfoWindow: true
-//     });
-
-//   onInfoWindowClose = () =>
-//     this.setState({
-//       activeMarker: null,
-//       showingInfoWindow: false
-//     });
-
-//   onMapClicked = () => {
-//     if (this.states.showingInfoWindow)
-//       this.setState({
-//         activeMarker: null,
-//         showingInfoWindow: false
-//       });
-//   };
-
-
 onMarkerClick = (props, marker, e) =>
   this.setState({
     selectedPlace: props,
@@ -233,48 +77,39 @@ onClose = props => {
   }
 };
 
-  // displayMarkers = () => {
-  //   return this.state.stores.map((store, index) => {
-  //     return <Marker key={index} id={index}
-  //     label={{text: 'hello'}}
-  //     position={{
-  //      lat: store.latitude,
-  //      lng: store.longitude
-  //    }}
-  //    onClick={() => this.onMarkerClick} //console.log("This works")
-  //    />
-  //   })
+  // toggleDarkmode() {
+  //   this.setState({isDarkmodeVisible: !this.state.isDarkmodeVisible})
   // }
-  // toggleHeatmap() {
-  //   this.setState({isHeatmapVisible: !this.state.isHeatmapVisible})
-  // }
-  toggleDarkmode() {
-    this.setState({isDarkmodeVisible: !this.state.isDarkmodeVisible})
-  }
-  // map = <HeatMap
-  //   gradient={gradient}
-  //   opacity = {3}
-  //   positions = {this.props.policeCall.map(({M, N}) => {
-  //     return {lat: M, lng: N};
-  //   })}
-  //   radius={30}
-  //   />
+  onDarkMode = (props, marker, e) =>
+  this.setState({
+    mapstyles: props,
+    isDarkmodeVisible: true
+    
+  });
 
+offDarkMode = props =>{
+  if(this.state.isDarkmodeVisible){
+    this.setState({
+      isDarkmodeVisible: false,
+      mapstyles: null 
+    });
+  }
+};
+
+
+  // const classes = useStyles();
   render() {
+    console.log(this.state.mapstyles);
     return (
+      <GridList cellHeight={180} className={this.useStyles}>
         <Map
           google={this.props.google}
-          // onClick={this.onMarkerClick}
           zoom={10}
           style={mapStyles}
-          // styles={mapstyles}
-          // containerStyle={containerStyle}
+          onRightclick={this.onDarkMode}
+          styles={this.state.mapstyles}
+          onDblclick={this.offDarkMode}
           initialCenter={{ lat: 33.360355, lng: -111.801682}}
-          // mapTypeControl = {true} This is where I am trying to edit the control.
-          // mapTypeControlOptions= {{
-          //   style: this.props.google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-          //   mapTypeIds:['roadmap', 'darkmode']
-          // }}
         >
           <Marker
             onClick={this.onMarkerClick}
@@ -386,41 +221,6 @@ onClose = props => {
             name={'Cactus Yards has 83 spots available'}
             position={{lat: 33.354817, lng: -111.694103}} 
           />
-          {/* {this.displayMarkers()} */}
-          {/* <Marker
-           onClick={this.onMarkerClick}
-           name={'Gilbert, Arizona'}
-          />  */}
-          {/* <InfoWindow
-          marker={this.states.activeMarker}
-          visible={this.states.showingInfoWindow}
-          onClose={this.onClose}>
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-          </div>
-        </InfoWindow> */}
-
-        {/* <InfoWindow
-          marker={this.states.activeMarker}
-          onClose={this.onInfoWindowClose}
-          visible={this.states.showingInfoWindow}>
-          <div>
-            <h1>{this.states.selectedPlace.name}</h1>
-          </div>
-        </InfoWindow> */}
-        {/* <div id="floating-panel">
-          <Button onclick="toggleDarkmode()">Toggle Dark Mode</Button>
-        </div> */}
-        
-        {/* <HeatMap
-          // gradient={gradient}
-          opacity = {3}
-          positions = {this.states.stores(({M, N}) => {
-          return {lat: M, lng: N};
-          })}
-          radius={30}
-        /> */}
-         {/* {this.state.isHeatmapVisible ? map : null} */}
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
@@ -431,6 +231,7 @@ onClose = props => {
           </div>
         </InfoWindow>
         </Map>
+      </GridList>
     );
   }
 }
