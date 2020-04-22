@@ -24,6 +24,7 @@ import Alerts from './Components/Alerts/Alerts.js';
 import Events from './Components/Events/EventsRouter';
 import Parking from './Components/Parking/ParkingRouter';
 import Home from './Components/Home/HomeRouter';
+import Deals from './Components/Deals/Deals.js';
 
 
 function App() {
@@ -110,6 +111,9 @@ function App() {
               <Button component={Link} to="/login" color="inherit">
                 Login
               </Button>
+              <Button component={Link} to="/Register" color="inherit">
+                Register
+              </Button>
             </Toolbar>
           </AppBar>
           <div className="mobile-simulation">
@@ -118,7 +122,7 @@ function App() {
               <Route exact path="/register" component={Register}/>
               <Route key='home' path='/' exact component={() => <Home/>}/> 
               <Route key='events' path='/events' component={() => <Events/>}/>
-              <Route key='deals' path='/deals' component={() => <Test test="DEALS"/>}/>
+              <Route key='deals' path='/deals' component={() => <Deals/>}/>
               <Route key='parking' path='/parking' component={() => <Parking/>}/>
               <Route key='alerts' path='/alerts' component={() => <Alerts/>}/>
               <Route key='profile' path='/profile' component={() => <Test test="PROFILE"/>}/>

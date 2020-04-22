@@ -96,6 +96,9 @@ class Login extends Component {
               <p className="control">
                 <a href="/forgotpassword">Forgot password?</a>
               </p>
+              <p className="control">
+                <a href="/register">Register for an account</a>
+              </p>
             </div>
             <div className="field" >
               <p className="control">
